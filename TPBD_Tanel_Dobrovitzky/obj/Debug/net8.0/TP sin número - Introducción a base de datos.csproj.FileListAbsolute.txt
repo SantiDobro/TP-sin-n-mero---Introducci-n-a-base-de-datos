@@ -1,0 +1,29 @@
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\bin\Debug\net8.0\appsettings.Development.json
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\bin\Debug\net8.0\appsettings.json
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\bin\Debug\net8.0\TP sin número - Introducción a base de datos.staticwebassets.runtime.json
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\bin\Debug\net8.0\TP sin número - Introducción a base de datos.exe
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\bin\Debug\net8.0\TP sin número - Introducción a base de datos.deps.json
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\bin\Debug\net8.0\TP sin número - Introducción a base de datos.runtimeconfig.json
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\bin\Debug\net8.0\TP sin número - Introducción a base de datos.dll
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\bin\Debug\net8.0\TP sin número - Introducción a base de datos.pdb
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.GeneratedMSBuildEditorConfig.editorconfig
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.AssemblyInfoInputs.cache
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.AssemblyInfo.cs
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.csproj.CoreCompileInputs.cache
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.MvcApplicationPartsAssemblyInfo.cache
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.RazorAssemblyInfo.cache
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.RazorAssemblyInfo.cs
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.sourcelink.json
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\staticwebassets.build.json
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\staticwebassets.development.json
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\staticwebassets\msbuild.TP sin número - Introducción a base de datos.Microsoft.AspNetCore.StaticWebAssets.props
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\staticwebassets\msbuild.build.TP sin número - Introducción a base de datos.props
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.TP sin número - Introducción a base de datos.props
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.TP sin número - Introducción a base de datos.props
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\staticwebassets.pack.json
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\scopedcss\bundle\TP sin número - Introducción a base de datos.styles.css
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.dll
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\refint\TP sin número - Introducción a base de datos.dll
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.pdb
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\TP sin número - Introducción a base de datos.genruntimeconfig.cache
+Z:\PROG\TP sin número - Introducción a base de datos\TP sin número - Introducción a base de datos\obj\Debug\net8.0\ref\TP sin número - Introducción a base de datos.dll
