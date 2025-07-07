@@ -17,8 +17,12 @@ public class HomeController : Controller
     {
         return View();
     }
-    public IActionResult Login()
+    public IActionResult Login(string usuario, string contraseña)
     {
+        if(Integrante.VerificarInicioSesion(usuario,contraseña))
+        {
+            Integrante integranteEncontrado = Integrante.VerificarInicioSesion(usuario,contraseña).integranteEncontrado;
+        }
         return View("Index");
     }
     public IActionResult Perfil()

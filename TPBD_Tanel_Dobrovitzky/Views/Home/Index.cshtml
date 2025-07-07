@@ -14,9 +14,9 @@
     <div class="login-container">
         <h1 class="title">Bienvenido</h1>
         <p class="subtitle">Por favor, inicia sesión para continuar</p>
-        <form action="/login" method="post" class="login-form">
-            <input type="text" name="username" placeholder="Usuario" required>
-            <input type="password" name="password" placeholder="Contraseña" required>
+        <form action='@Url.Action("login", "Home")' method="post" class="login-form">
+            <input type="text" name="usuario" placeholder="Usuario" required>
+            <input type="password" name="contraseña" placeholder="Contraseña" required>
             <button type="submit">Iniciar Sesión</button>
         </form>
         <div class="extras">
