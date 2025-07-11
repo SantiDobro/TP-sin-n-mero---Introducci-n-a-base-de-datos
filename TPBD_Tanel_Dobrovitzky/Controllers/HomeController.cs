@@ -19,14 +19,21 @@ public class HomeController : Controller
     }
     public IActionResult Login(string usuario, string contraseña)
     {
-        if(Integrante.VerificarInicioSesion(usuario,contraseña))
-        {
-            Integrante integranteEncontrado = Integrante.VerificarInicioSesion(usuario,contraseña).integranteEncontrado;
-        }
-        return View("Index");
+       Integrante integranteEncontrado = Integrante.VerificarInicioSesion(usuario,contraseña);
+       
+       if (integranteEncontrado != null)
+       {
+         return RedirectToAction("Perfil");
+       }
+       else 
+       {
+        return View("ErrorInicioSesión");
+       }
+        return View("ErrorInicioSesión");
     }
-    public IActionResult Perfil()
+    public IActionResult Perfil(Integrante integranteEncontrado)
     {
+        ViewBag.integranteEncontrado = integranteEncontrado;
         return View();
     }
 }

@@ -21,31 +21,16 @@ public class Integrante
         Pais = pais;
         Telefono = telefono;
     }
-  public Integrante() { } // Necesario para que Dapper funcione bien
-    public static List<Integrante> LevantarIntegrantes()
+    public Integrante() { }
+    public static List<Integrante> LevantarIntegrante(string usuario, string contraseña)
     {
-        List<Integrante> integrantes = new List<Integrante>();
+        Integrante integranteEncontrado = new Integrante();
         using (SqlConnection connection = BD.ObtenerConexion())
         {
-            string query = "SELECT * FROM Integrantes";
-            integrantes = connection.Query<Integrante>(query).ToList();
+            string query = "SELECT * FROM Integrantes WHERE Usuario = @usuario AND Contraseña = @contraseña";
+            integranteEncontrado = connection.QueryFirstOrDefault<Integrante>(query)();
         }
-        return integrantes;
-    }
-    public static bool VerificarInicioSesion(string usuario, string contraseña)
-    {
-        Integrante integranteEncontrado = null;
-        bool inicioSesion = false;
-       List<Integrante> integrantes = LevantarIntegrantes();
-        
-      for (int i = 0; i < integrantes.Count; i++)
-        {
-        if(integrantes[i].usuario == usuario && integrantes[i].contraseña == contraseña) 
-     {
-     inicioSesion = true;
-     integrantes[i] = integranteEncontrado;
-    }
-       }
+        return integranteEncontrado;
     }
 }
 
