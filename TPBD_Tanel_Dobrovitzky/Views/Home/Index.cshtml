@@ -1,28 +1,28 @@
-﻿@{
-    ViewData["Title"] = "Index";
+@{
+    ViewData["Title"] = "Inicio";
 }
 
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesión</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="login-container">
-        <h1 class="title">Bienvenido</h1>
-        <p class="subtitle">Por favor, inicia sesión para continuar</p>
-        <form action='@Url.Action("login", "Home")' method="post" class="login-form">
-            <input type="text" name="usuario" placeholder="Usuario" required>
-            <input type="password" name="contraseña" placeholder="Contraseña" required>
-            <button type="submit">Iniciar Sesión</button>
-        </form>
-        <div class="extras">
-            <a href="#">¿Olvidaste tu contraseña?</a>
-            <a href="#">Crear cuenta nueva</a>
+<div class="main-container">
+    @if (Model != null)
+    {
+        <div class="card perfil-card">
+            <h2>Bienvenido, <span class="highlight">@Model.Usuario</span> 👋</h2>
+            <ul class="info-list">
+                <li><strong>Género:</strong> @Model.Genero</li>
+                <li><strong>Color favorito:</strong> @Model.Color</li>
+                <li><strong>Equipo:</strong> @Model.Equipo</li>
+                <li><strong>País:</strong> @Model.Pais</li>
+                <li><strong>Teléfono:</strong> @Model.Telefono</li>
+            </ul>
+            <a href="@Url.Action("CerrarSesion", "Home")" class="btn">Cerrar sesión</a>
         </div>
-    </div>
-</body>
-</html>
+    }
+    else
+    {
+        <div class="card">
+            <h2>No has iniciado sesión</h2>
+            <p>Para ver tu perfil, primero iniciá sesión.</p>
+            <a href="@Url.Action("IniciarSesion", "Home")" class="btn">Iniciar sesión</a>
+        </div>
+    }
+</div>

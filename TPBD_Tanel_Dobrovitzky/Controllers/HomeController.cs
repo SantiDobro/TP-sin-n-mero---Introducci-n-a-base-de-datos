@@ -1,4 +1,3 @@
-using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using TP_sin_número___Introducción_a_base_de_datos.Models;
 
@@ -12,10 +11,27 @@ public class HomeController : Controller
     {
         _logger = logger;
     }
+
+    // Muestra datos si hay sesión, o botón de login
     public IActionResult Index()
+    {
+        string usuario = HttpContext.Session.GetString("usuario");
+
+        if (!string.IsNullOrEmpty(usuario))
+        {
+            var integrante = Integrante.BuscarPorUsuario(usuario);
+            return View(integrante);
+        }
+
+        return View(null); // sin loguear
+    }
+
+    // Vista de login
+    public IActionResult IniciarSesion()
     {
         return View();
     }
+
     [HttpPost]
     public IActionResult Login(string usuario, string contraseña)
     {
@@ -23,28 +39,19 @@ public class HomeController : Controller
 
         if (integrante != null)
         {
-            return View("Perfil", integrante);
             HttpContext.Session.SetString("usuario", integrante.Usuario);
+            return RedirectToAction("Index");
         }
         else
         {
             ViewBag.Error = "Usuario o contraseña incorrectos.";
-            return View("Index");
+            return View("IniciarSesion");
         }
     }
-    public IActionResult Perfil(Integrante integranteEncontrado)
-    {
-        string usuario = HttpContext.Session.GetString("usuario");
 
-        if (string.IsNullOrEmpty(usuario))
-            return RedirectToAction("Index");
-
-        var integrante = Integrante.BuscarPorUsuario(usuario);
-        return View(integrante);
-    }
     public IActionResult CerrarSesion()
     {
-        HttpContext.Session.Clear(); // Borra todos los datos de sesión
+        HttpContext.Session.Clear();
         return RedirectToAction("Index");
     }
 }
