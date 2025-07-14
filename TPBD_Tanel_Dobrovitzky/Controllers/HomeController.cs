@@ -12,7 +12,6 @@ public class HomeController : Controller
         _logger = logger;
     }
 
-    // Muestra datos si hay sesión, o botón de login
     public IActionResult Index()
     {
         string usuario = HttpContext.Session.GetString("usuario");
@@ -26,7 +25,6 @@ public class HomeController : Controller
         return View(null); // sin loguear
     }
 
-    // Vista de login
     public IActionResult IniciarSesion()
     {
         return View();
