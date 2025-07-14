@@ -22,7 +22,7 @@ public class HomeController : Controller
             return View(integrante);
         }
 
-        return View(null); // sin loguear
+        return View(null);
     }
 
     public IActionResult IniciarSesion()
