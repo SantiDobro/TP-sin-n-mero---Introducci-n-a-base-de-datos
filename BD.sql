@@ -1,114 +1,22 @@
-USE [master]
+CREATE DATABASE BD_Integrantes;
 GO
-/****** Object:  Database [BD_Integrantes]    Script Date: 11/7/2025 08:19:05 ******/
-CREATE DATABASE [BD_Integrantes]
- CONTAINMENT = NONE
- ON  PRIMARY 
-( NAME = N'BD_Integrantes', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\BD_Integrantes.mdf' , SIZE = 8192KB , MAXSIZE = UNLIMITED, FILEGROWTH = 65536KB )
- LOG ON 
-( NAME = N'BD_Integrantes_log', FILENAME = N'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\BD_Integrantes_log.ldf' , SIZE = 8192KB , MAXSIZE = 2048GB , FILEGROWTH = 65536KB )
-GO
-ALTER DATABASE [BD_Integrantes] SET COMPATIBILITY_LEVEL = 140
-GO
-IF (1 = FULLTEXTSERVICEPROPERTY('IsFullTextInstalled'))
-begin
-EXEC [BD_Integrantes].[dbo].[sp_fulltext_database] @action = 'enable'
-end
-GO
-ALTER DATABASE [BD_Integrantes] SET ANSI_NULL_DEFAULT OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET ANSI_NULLS OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET ANSI_PADDING OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET ANSI_WARNINGS OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET ARITHABORT OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET AUTO_CLOSE OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET AUTO_SHRINK OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET AUTO_UPDATE_STATISTICS ON 
-GO
-ALTER DATABASE [BD_Integrantes] SET CURSOR_CLOSE_ON_COMMIT OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET CURSOR_DEFAULT  GLOBAL 
-GO
-ALTER DATABASE [BD_Integrantes] SET CONCAT_NULL_YIELDS_NULL OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET NUMERIC_ROUNDABORT OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET QUOTED_IDENTIFIER OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET RECURSIVE_TRIGGERS OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET  DISABLE_BROKER 
-GO
-ALTER DATABASE [BD_Integrantes] SET AUTO_UPDATE_STATISTICS_ASYNC OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET DATE_CORRELATION_OPTIMIZATION OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET TRUSTWORTHY OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET ALLOW_SNAPSHOT_ISOLATION OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET PARAMETERIZATION SIMPLE 
-GO
-ALTER DATABASE [BD_Integrantes] SET READ_COMMITTED_SNAPSHOT OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET HONOR_BROKER_PRIORITY OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET RECOVERY FULL 
-GO
-ALTER DATABASE [BD_Integrantes] SET  MULTI_USER 
-GO
-ALTER DATABASE [BD_Integrantes] SET PAGE_VERIFY CHECKSUM  
-GO
-ALTER DATABASE [BD_Integrantes] SET DB_CHAINING OFF 
-GO
-ALTER DATABASE [BD_Integrantes] SET FILESTREAM( NON_TRANSACTED_ACCESS = OFF ) 
-GO
-ALTER DATABASE [BD_Integrantes] SET TARGET_RECOVERY_TIME = 60 SECONDS 
-GO
-ALTER DATABASE [BD_Integrantes] SET DELAYED_DURABILITY = DISABLED 
-GO
-EXEC sys.sp_db_vardecimal_storage_format N'BD_Integrantes', N'ON'
-GO
-ALTER DATABASE [BD_Integrantes] SET QUERY_STORE = OFF
-GO
-USE [BD_Integrantes]
-GO
-/****** Object:  User [alumno]    Script Date: 11/7/2025 08:19:05 ******/
-CREATE USER [alumno] FOR LOGIN [alumno] WITH DEFAULT_SCHEMA=[dbo]
-GO
-/****** Object:  Table [dbo].[Integrante]    Script Date: 11/7/2025 08:19:05 ******/
-SET ANSI_NULLS ON
-GO
-SET QUOTED_IDENTIFIER ON
-GO
-CREATE TABLE [dbo].[Integrante](
-	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Usuario] [nvarchar](100) NOT NULL,
-	[Contraseña] [nvarchar](100) NOT NULL,
-	[Genero] [nvarchar](20) NULL,
-	[Color] [nvarchar](50) NULL,
-	[Equipo] [nvarchar](100) NULL,
-	[Pais] [nvarchar](100) NULL,
-	[Telefono] [nvarchar](20) NULL,
-PRIMARY KEY CLUSTERED 
-(
-	[Id] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-SET IDENTITY_INSERT [dbo].[Integrante] ON 
 
-INSERT [dbo].[Integrante] ([Id], [Usuario], [Contraseña], [Genero], [Color], [Equipo], [Pais], [Telefono]) VALUES (3, N'SantiDobro', N'Dybala10', N'Masculino', N'Azul', N'River Plate', N'Argentina', N'+541112345678')
-INSERT [dbo].[Integrante] ([Id], [Usuario], [Contraseña], [Genero], [Color], [Equipo], [Pais], [Telefono]) VALUES (4, N'LiorTanel', N'Aldosivi123', N'Masculino', N'Rojo', N'Aldosivi', N'Argentina', N'+541198765432')
-SET IDENTITY_INSERT [dbo].[Integrante] OFF
+USE BD_Integrantes;
 GO
-USE [master]
+
+CREATE TABLE Integrante (
+    Id INT IDENTITY(1,1) PRIMARY KEY,
+    Usuario NVARCHAR(100) NOT NULL,
+    Contraseña NVARCHAR(100) NOT NULL,
+    Genero NVARCHAR(20),
+    Color NVARCHAR(50),
+    Equipo NVARCHAR(100),
+    Pais NVARCHAR(100),
+    Telefono NVARCHAR(20)
+);
 GO
-ALTER DATABASE [BD_Integrantes] SET  READ_WRITE 
+
+INSERT INTO Integrante (Usuario, Contraseña, Genero, Color, Equipo, Pais, Telefono) VALUES
+('SantiDobro', 'Dybala10', 'Masculino', 'Azul', 'River Plate', 'Argentina', '+541112345678'),
+('LiorTanel', 'Aldosivi123', 'Masculino', 'Rojo', 'Aldosivi', 'Argentina', '+541198765432');
 GO
