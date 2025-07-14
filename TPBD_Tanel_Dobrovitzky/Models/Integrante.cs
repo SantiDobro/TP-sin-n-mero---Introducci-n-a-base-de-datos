@@ -21,5 +21,13 @@ public class Integrante
         return connection.QueryFirstOrDefault<Integrante>(query, new { usuario, contraseña });
     }
     }
+    public static Integrante BuscarPorUsuario(string usuario)
+{
+    using (SqlConnection connection = BD.ObtenerConexion())
+    {
+        string query = "SELECT * FROM Integrante WHERE Usuario = @usuario";
+        return connection.QueryFirstOrDefault<Integrante>(query, new { usuario });
+    }
+}
 }
 

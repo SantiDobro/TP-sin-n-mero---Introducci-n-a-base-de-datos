@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TP sin número - Introducción a base de datos")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ecc639d0ce1b44a1e0e7fdfde6db2242eee1cf3a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5d51d32d6a30f509f582335da66c8374391b41aa")]
 [assembly: System.Reflection.AssemblyProductAttribute("TP sin número - Introducción a base de datos")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TP sin número - Introducción a base de datos")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
