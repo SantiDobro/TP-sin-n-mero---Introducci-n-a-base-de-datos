@@ -11,26 +11,15 @@ public class Integrante
     public string Pais { get; set; }
     public string Telefono { get; set; }
 
-    public Integrante(string usuario, string contraseña, string genero, string color, string equipo, string pais, string telefono)
-    {
-        Usuario = usuario;
-        Contraseña = contraseña;
-        Genero = genero;
-        Color = color;
-        Equipo = equipo;
-        Pais = pais;
-        Telefono = telefono;
-    }
     public Integrante() { }
-    public static List<Integrante> LevantarIntegrante(string usuario, string contraseña)
+    
+    public static Integrante LevantarIntegrante(string usuario, string contraseña)
     {
-        Integrante integranteEncontrado = new Integrante();
-        using (SqlConnection connection = BD.ObtenerConexion())
-        {
-            string query = "SELECT * FROM Integrantes WHERE Usuario = @usuario AND Contraseña = @contraseña";
-            integranteEncontrado = connection.QueryFirstOrDefault<Integrante>(query)();
-        }
-        return integranteEncontrado;
+    using (SqlConnection connection = BD.ObtenerConexion())
+    {
+        string query = "SELECT * FROM Integrante WHERE Usuario = @usuario AND Contraseña = @contraseña";
+        return connection.QueryFirstOrDefault<Integrante>(query, new { usuario, contraseña });
+    }
     }
 }
 

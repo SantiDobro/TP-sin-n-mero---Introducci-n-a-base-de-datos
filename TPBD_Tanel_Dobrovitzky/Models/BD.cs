@@ -3,7 +3,7 @@ using Dapper;
 
 public static class BD
 {
-    private static string _connectionString = @"Server=localhost; DataBase=Integrante; Integrated Security=True; TrustServerCertificate=True;";
+    private static string _connectionString = @"Server=DESKTOP-D0RO1QD\SQLEXPRESS; DataBase=BD_Integrantes; Integrated Security=True; TrustServerCertificate=True;";
     
     public static SqlConnection ObtenerConexion()
     {
